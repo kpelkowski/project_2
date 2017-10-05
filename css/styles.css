@@ -20,7 +20,7 @@ h2 {
 }
 
 body {
-  max-width: 80%;
+  max-width: 100%;
   text-align: center;
   margin: 0 auto;
   padding: 0;
@@ -70,14 +70,13 @@ a {
   background-color: #48c9b0;
 
 }
-
-.main-nav a {
-  padding: 10px 15px;
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-right: 25px;
+.name,
+.main-nav a,
+.alt-nav a,
+.footer-nav a {
+  padding: 10px 10px;
+  display: block;
   text-decoration: none;
-  font-size: 15px;
 }
 
 .main-nav a:link {
@@ -91,15 +90,15 @@ a {
 .name {
   text-transform: capitalize;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 40px;
-  float: left;
-  display: inline-block;
+  margin: 0 auto;
 }
 
 .name,
 .main-nav li {
   text-align: center;
-  margin: 0 auto;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 20px;
 }
 
 .profile-pic {
@@ -153,27 +152,45 @@ a {
     margin-left: 13px;
   }
 
-  .name,
-  .main-nav li {
-    display: block;
-    text-align: center;
-    margin: auto;
-  }
-
   .name {
     margin-left: -40px;
     width: 400px;
-    display: inline-block;
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
+    display: inline-block;
+  }
+
+  .secondary {
+    visibility: hidden;
+    display: none;
+  }
+
+  .footer-name {
+    float: left;
+    margin-left: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+  }
+
+  .alt-nav li {
+    font-size: 15px;
+    margin-right: 5px;
+    float: right;
+    margin-top: 30px;
+  }
+
+  .footer-name,
+  .alt-nav
+  .alt-nav li {
+    display: inline;
   }
 }
 
 @media (min-width: 768px) {
 
   body {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .profile-pic {
@@ -189,23 +206,35 @@ a {
     margin-bottom: 15px;
   }
 
-  .main-nav li {
-    display: inline;
-  }
-
   .name,
-  .main-nav li {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+  .main-nav li,
+  .footer-nav li {
+    display: inline-block;
   }
 
   .name {
-    width: auto;
+    width: 300px;
     margin: 0 auto;
     text-align: center;
-    margin-top: 25px;
-    padding-left: 200px;
-    margin-right: 100px;
+    display: block;
+   }
+
+   .main-nav,
+   .footer-nav li {
+     margin-right: 0;
+     font-size: 1.2em;
+   }
+
+   .main-nav,
+   .footer-nav {
+     float: right;
+   }
+
+   .main-nav,
+   .footer-nav li {
+     float: left;
+     margin-left: 12px;
+     padding: 5px;
    }
 
   .profile-pic {
@@ -228,12 +257,27 @@ a {
     padding-left: 20px;
   }
 
+  .secondary {
+    visibility: visible;
+    display: inline-block;
+  }
+
+  .alt-nav {
+    visibility: hidden;
+    display: none;
+  }
+
 }
 
 @media (min-width: 1024px) {
 
   body {
-    width: 80%;
+    width: 100%;
+  }
+
+  .secondary {
+    visibility: visible;
+    display: none;
   }
 
   .col {
@@ -252,22 +296,52 @@ a {
    text-align: left;
   }
 
+  .main-nav {
+    margin-right: 0px;
+  }
+
+  .main-nav {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .main-nav li {
+    padding: 0 20px  0 20px;
+    margin: 0;
+  }
+
   .name {
     width: 500px;
-    margin-left: -175px;
-    margin-right: 5px;
+    float: left;
+    padding-bottom: 25px;
+    margin-left: -80px;
+    margin-right: 50px;
   }
 
   .profile-pic {
     width: 40%;
   }
 
-  .name,
-  .main-nav li {
+  .name a,
+  .main-nav a {
+    font-size: .4em;
     display: inline-block;
+  }
+
+
+  .name,
+  .main-nav,
+  .main-nav li {
     margin-bottom: 0px;
     margin-top: 15px;
     font-size: 40px;
+    display: inline-block;
+    float: left;
+  }
+
+  .alt-nav {
+    visibility: hidden;
+    display: none;
   }
 
 }
