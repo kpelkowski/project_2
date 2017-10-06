@@ -380,9 +380,10 @@ a {
     display: inline-block;
   }
 
-  .main-nav: {
-    width: auto;
+  .main-nav {
+    width: 65%;
     float: right;
+    text-align: right;
   }
 
 }
