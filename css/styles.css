@@ -75,7 +75,6 @@ a {
 .alt-nav a,
 .footer-nav a {
   padding: 10px 10px;
-  display: block;
   text-decoration: none;
 }
 
@@ -137,8 +136,6 @@ a {
   clear: both;
 }
 
-
-
 /*----media queries----*/
 
 @media (min-width: 320px) {
@@ -155,11 +152,11 @@ a {
   }
 
   .name {
-    margin-left: -40px;
     width: 400px;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
     margin-top: 10px;
+    margin-left: 40px;
   }
 
   .main-nav li {
@@ -194,7 +191,7 @@ a {
   }
 
   .footer-name,
-  .alt-nav
+  .alt-nav,
   .alt-nav li {
     display: inline;
   }
@@ -207,10 +204,10 @@ a {
 .alt-nav li {
   font-size: 20px;
   float: left;
-  display: inline-block;
+  display: inline;
   margin-left: 10px;
   margin-right: 0;
-}
+ }
 
 }
 
@@ -233,24 +230,24 @@ a {
     margin-bottom: 15px;
   }
 
-  .name,
-  .main-nav,
-  .main-nav li,
-  .footer-nav li {
-    display: inline-block;
-  }
 
-  .name {
-    width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-   }
+    .name,
+    .main-nav,
+    .main-nav li,
+    .footer-nav li {
+      display: inline-block;
+    }
+
+    .name {
+      width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+     }
 
   .main-nav li {
     font-size: 40px;
     margin-bottom: -15px;
-    white-space: nowrap;
   }
 
   .main-nav a {
@@ -275,7 +272,7 @@ a {
      float: left;
      margin-left: 12px;
      padding: 5px;
-     display: block;
+     display: inline;
    }
 
   .profile-pic {
@@ -342,10 +339,8 @@ a {
   }
 
   .name {
-    width: 330px;
+    width: 300px;
     float: left;
-    margin-right: 80px;
-    margin-top: 0;
   }
 
   .name,
@@ -360,14 +355,15 @@ a {
   }
 
   .main-nav a {
-    font-size: .4em;
+    font-size: .5em;
+    display: inline-block;
   }
 
   .name,
   .main-nav li {
     margin-top: 10px;
     font-size: 2.1em;
-
+    display: inline-block;
   }
 
   .secondary {
@@ -382,6 +378,11 @@ a {
   .main-name {
     visibility: visible;
     display: inline-block;
+  }
+
+  .main-nav: {
+    width: auto;
+    float: right;
   }
 
 }
